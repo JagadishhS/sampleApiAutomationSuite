@@ -1,0 +1,23 @@
+{
+  "conversation_id": "#string",
+  "to": "#string",
+  "from": "#string",
+  "body": {
+    "text": "#string"
+  },
+  "application_id": "#string",
+  "timestamp": "#string",
+  "_embedded": {
+    "from_user": {
+      "id": "#string",
+      "name": "#string",
+      "display_name": "#string",
+      "image_url": "#string"
+    },
+    "from_member": {
+      "id": "#string"
+    }
+  },
+  "id": "#number",
+  "type": "#string"
+}

@@ -1,0 +1,4 @@
+{
+  "description": "Event does not exist, or you do not have access.",
+  "code": "event:error:not-found"
+}

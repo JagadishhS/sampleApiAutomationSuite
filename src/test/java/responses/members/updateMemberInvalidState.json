@@ -1,0 +1,9 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "action": [
+      "\"action\" must be [join]"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}

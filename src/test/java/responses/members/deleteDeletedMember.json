@@ -1,0 +1,4 @@
+{
+  "description": "The request failed due to the invalid current member state. Please provide a valid member state and try again.",
+  "code": "conversation:error:invalid-member-state"
+}

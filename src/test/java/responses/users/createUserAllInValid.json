@@ -1,0 +1,15 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "name": [
+      "\"name\" must be a string"
+    ],
+    "image_url": [
+      "\"image_url\" must be a string"
+    ],
+    "display_name": [
+      "\"display_name\" must be a string"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}

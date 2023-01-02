@@ -1,0 +1,8 @@
+{
+  "type": "text",
+  "to": "dummyIdOne",
+  "from": "dummyIdTwo",
+  "body": {
+    "text": "My Text"
+  }
+}

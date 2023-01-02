@@ -1,0 +1,14 @@
+[
+  {
+    "user_id": "#string",
+    "name": "#string",
+    "user_name": "#string",
+    "state": "#string"
+  },
+  {
+    "user_id": "#string",
+    "name": "#string",
+    "user_name": "#string",
+    "state": "#string"
+  }
+]

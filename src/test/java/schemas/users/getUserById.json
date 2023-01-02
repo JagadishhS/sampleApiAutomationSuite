@@ -1,0 +1,11 @@
+{
+  "id": "#string",
+  "name": "#string",
+  "image_url": "#string",
+  "display_name": "#string",
+  "properties": {
+    "custom_data": {}
+  },
+  "channels": {},
+  "href": "#string"
+}

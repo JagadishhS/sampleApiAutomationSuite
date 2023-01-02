@@ -1,0 +1,9 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "event": [
+      "\"event\" with type  is not supported"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}

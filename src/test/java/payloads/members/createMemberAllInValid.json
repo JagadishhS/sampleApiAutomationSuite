@@ -1,0 +1,7 @@
+{
+  "action": "dummyAction",
+  "user_id": "dummyUserId",
+  "channel": {
+    "type": "dummyChannelType"
+  }
+}

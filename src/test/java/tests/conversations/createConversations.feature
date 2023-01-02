@@ -1,14 +1,21 @@
 Feature: test cases for create conversations API
 
+  Background:
+    # deleting all existing conversations
+    * def res = call read(reusableFeatures + 'common.feature@getConversations')
+    * def res = karate.jsonPath(res.response, "$._embedded.conversations.*.uuid")
+    * def fun = function(arg){ for (let i = 0; i < arg.length; i++) { karate.call(reusableFeatures + 'common.feature@deleteConversation', {id: arg[i]})}}
+    * call fun res
+
   Scenario: verify invalid and valid jwt response for create conversations api
     # 'hitting create conversations api with invalid token'
-    * call read(baseCalls + '@post') {path: #(conversations) , content : {}, newAuth : 'asdfasdf', status : 401}
+    * call read(baseCalls + '@post') {path: #(conversations) , content : {}, newAuth : 'dummyAuth', status : 401}
       # 'verifying error response'
     * match response ==  read(responses + 'invalidJWT.json')
     # 'hitting create conversations api with valid token and verifying status code'
-    * def conOne = call read(reusableFeatures + 'common.feature@createConversation')
+    * def conOne = call read(reusableFeatures + 'common.feature@createConversation') { newAuth : #(auth), status : 200}
     # deleting created conversation
-    * call read(reusableFeatures + 'common.feature@deleteConversation') {id : #(conOne.response.id)}
+    * call read(reusableFeatures + 'common.feature@deleteConversation') {id : #(conOne.response.id),newAuth : #(auth), status : 200}
 
   Scenario: verify schema of create conversations with all valid inputs in body
     * def conOne = call read(reusableFeatures + 'common.feature@createConversation')

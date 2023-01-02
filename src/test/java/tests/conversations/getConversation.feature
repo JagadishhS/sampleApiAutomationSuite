@@ -1,10 +1,17 @@
 Feature: test cases to get conversation by ID API
 
+  Background:
+    # deleting all existing conversations
+    * def res = call read(reusableFeatures + 'common.feature@getConversations')
+    * def res = karate.jsonPath(res.response, "$._embedded.conversations.*.uuid")
+    * def fun = function(arg){ for (let i = 0; i < arg.length; i++) { karate.call(reusableFeatures + 'common.feature@deleteConversation', {id: arg[i]})}}
+    * call fun res
+
   Scenario: verify invalid and valid jwt response for get conversation by id api
      # creating a conversation
     * def conOne = call read(reusableFeatures + 'common.feature@createConversation')
     # 'hitting get conversation by id api with invalid token'
-    * call read(reusableFeatures + 'common.feature@getConversation') {newAuth : 'asdf' , id : #(conOne.response.id), status : 401}
+    * call read(reusableFeatures + 'common.feature@getConversation') {newAuth : 'dummyAuth' , id : #(conOne.response.id), status : 401}
       # 'verifying error response'
     * match response ==  read(responses + 'invalidJWT.json')
     # 'hitting get conversation by id api with valid token and verifying status code'

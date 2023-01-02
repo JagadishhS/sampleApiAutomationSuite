@@ -1,0 +1,4 @@
+{
+  "description": "The request failed due to the user already having a member invited with that channel content. Please provide a valid user and try again.",
+  "code": "conversation:error:member-already-invited"
+}

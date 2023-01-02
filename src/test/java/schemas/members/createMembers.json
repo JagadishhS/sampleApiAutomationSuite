@@ -1,0 +1,21 @@
+{
+  "id": "#string",
+  "user_id": "#string",
+  "name": "#string",
+  "display_name": "#string",
+  "state": "#string",
+  "timestamp": {
+    "invited": "#string"
+  },
+  "channel": {
+    "type": "#string",
+    "legs": [],
+    "leg_ids": []
+  },
+  "initiator": {
+    "invited": {
+      "isSystem": "#boolean"
+    }
+  },
+  "href": "#string"
+}

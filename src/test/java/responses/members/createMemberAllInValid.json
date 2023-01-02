@@ -1,0 +1,12 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "action": [
+      "\"action\" must be one of [invite, join]"
+    ],
+    "channel": [
+      "\"type\" is none from allowed ones [phone, sip, app, vbc, websocket, sms, mms, whatsapp, viber, messenger]"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}

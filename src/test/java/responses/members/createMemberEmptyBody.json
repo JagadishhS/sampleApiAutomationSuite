@@ -1,0 +1,15 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "action": [
+      "\"action\" is required"
+    ],
+    "channel": [
+      "\"channel\" is required"
+    ],
+    "requestBody": [
+      "\"requestBody\" must contain at least one of [user_id, user_name]"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}

@@ -40,18 +40,27 @@ function fn() {
 
   config.payloads = 'classpath:payloads/';
   config.conversationPayloads = 'classpath:payloads/conversations/';
+  config.userPayloads = 'classpath:payloads/users/';
+  config.memberPayloads = 'classpath:payloads/members/';
+  config.eventPayloads = 'classpath:payloads/events/';
 
   config.responses = 'classpath:responses/';
   config.conversationResponses = 'classpath:responses/conversations/';
-  config.userResponses = 'classpath:responses/users';
+  config.userResponses = 'classpath:responses/users/';
+  config.eventResponses = 'classpath:responses/events/';
+  config.memberResponses = 'classpath:responses/members/';
+  config.legResponses = 'classpath:responses/legs/';
 
   config.schemas = 'classpath:schemas/';
   config.conversationSchemas = 'classpath:schemas/conversations/';
   config.userSchemas = 'classpath:schemas/users/';
+  config.eventSchemas = 'classpath:schemas/events/';
+  config.memberSchemas = 'classpath:schemas/members/';
+  config.legSchemas = 'classpath:schemas/legs/';
 
   config.tests = 'classpath:tests/';
 
-  config.auth = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NzI1NjgwMjksImV4cCI6MTY3Mjc0MDgyOSwianRpIjoiSjhQMXlZT0dLUkxlIiwiYXBwbGljYXRpb25faWQiOiIyYmE4MTczZS0wMTk4LTRlN2YtOWNkNS0yMTc5ZDVjNjRkYzYifQ.Qvr2E52-_07dOXvwkLsUUHCpLKvXs2r1A8Ia_eDfPR1Ann5WixXjcYtvP58hDQgmH7ioYej9cWQ6pMMCpkMH8WuaISi5bmbiemYZXNZQETpsSRvNLb6G7PYIBhiGZID4cVNtNS52JtQpwYLTGureOzr56xbN-AsRpVsqEmIrAFaJsSquWfwwjFxfT24ID0hR089AdDyM-7AkGuCy9G2UBDmDLTZZzuMq5U4Dv38qZfXTtkT3tNX2ou77aEjRxi3i40nogA-nbfI44t0pW6t6wFz6-gF9WlMFcDXcbywnwSv5Olh_2hNCtkY2J2nPQc5Ng8Rrw3cguCQpKpmD-7RrUQ'
+  config.auth = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NzI2ODE4OTcsImV4cCI6MTY3MzI4NjY5NywianRpIjoiYjI3MExCSWdOb25NIiwiYXBwbGljYXRpb25faWQiOiIyYmE4MTczZS0wMTk4LTRlN2YtOWNkNS0yMTc5ZDVjNjRkYzYifQ.OVsL-hE80icRElkXRCVuKzBd_JBS83kBkJhA5ECbjlrSuKzH2Sgj-rA7rwbuBKjtcU5GT43qopz4VRwOX-DMVoQsDbm7ILVfX_p1u-ftJsua8L8sVl667Rsaoe2HB_4rwJhok7NH7nfhIBuwxbMKrWiQVqeEJ-5foJ97cgi6VIdSOmkWGRImtFL3lPymmMIIt_VBR4cqj3KCQghBX8MSTM0r7hmhtNuN6LoXg-Z2tniUWfkjkILhLw6mF8QowPLXUlkGCZwYXZo_5_qoJdYj8INZrko7A29SztggKbW0AMaeQs-m-LFD31WGOC5ZZx3PhoVObJW03bysrWapvmaYyw'
 
   return config;
 }

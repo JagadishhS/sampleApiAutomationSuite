@@ -1,12 +1,19 @@
 Feature: test cases for list conversation API
 
+  Background:
+    # deleting all existing conversations
+    * def res = call read(reusableFeatures + 'common.feature@getConversations')
+    * def res = karate.jsonPath(res.response, "$._embedded.conversations.*.uuid")
+    * def fun = function(arg){ for (let i = 0; i < arg.length; i++) { karate.call(reusableFeatures + 'common.feature@deleteConversation', {id: arg[i]})}}
+    * call fun res
+
   Scenario: verify invalid and valid jwt response for conversations list api
     # 'hitting list conversations api with invalid token'
-    * call read(baseCalls + '@get') {path: #(conversations) , newAuth : 'asdfasdf', status : 401}
+    * call read(baseCalls + '@get') {path: #(conversations) , newAuth : 'dummyAuth', status : 401}
       # 'verifying error response'
     * match response ==  read(responses + 'invalidJWT.json')
     # 'hitting list conversations api with valid token and verifying status code'
-    * call read(baseCalls + '@get') {path: #(conversations) }
+    * call read(baseCalls + '@get') {path: #(conversations) , newAuth : #(auth), status : 200}
 
   Scenario: verify conversation list api when no conversations are available
     # 'hitting list conversations api with invalid token'

@@ -1,0 +1,4 @@
+{
+  "description": "The request failed because the user name already exists. Please provide a unique user name and try again.",
+  "code": "user:error:duplicate-name"
+}

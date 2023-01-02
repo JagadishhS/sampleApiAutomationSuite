@@ -1,0 +1,104 @@
+[
+  {
+    "id": "#number",
+    "type": "#string",
+    "from": "#string",
+    "body": {
+      "cname": "#string",
+      "conversation": {
+        "conversation_id": "#string",
+        "display_name": "#string",
+        "name": "#string",
+        "image_url": "#string"
+      },
+      "invited_by": "#string",
+      "member_id": "#string",
+      "user": {
+        "user_id": "#string",
+        "member_id": "#string",
+        "id": "#string",
+        "media": {
+          "audio_settings": {
+            "enabled": "#boolean",
+            "earmuffed": "#boolean",
+            "muted": "#boolean"
+          },
+          "audio": {
+            "enabled": "#boolean",
+            "earmuffed": "#boolean",
+            "muted": "#boolean"
+          }
+        },
+        "name": "#string",
+        "display_name": "#string",
+        "image_url": "#string",
+        "properties": {
+          "custom_data": {}
+        }
+      },
+      "channel": {
+        "type": "#string",
+        "legs": []
+      },
+      "media": {
+        "audio_settings": {
+          "enabled": "#boolean",
+          "earmuffed": "#boolean",
+          "muted": "#boolean"
+        },
+        "audio": {
+          "enabled": "#boolean",
+          "earmuffed": "#boolean",
+          "muted": "#boolean"
+        }
+      },
+      "timestamp": {
+        "invited": "#string"
+      },
+      "initiator": {
+        "invited": {
+          "isSystem": "#boolean"
+        }
+      }
+    },
+    "timestamp": "#string",
+    "href": "#string"
+  },
+  {
+    "id": "#number",
+    "type": "#string",
+    "from": "#string",
+    "body": {
+      "member_id": "#string",
+      "user": {
+        "id": "#string",
+        "user_id": "#string",
+        "name": "#string",
+        "display_name": "#string",
+        "image_url": "#string",
+        "properties": {
+          "custom_data": {}
+        }
+      },
+      "channel": {
+        "type": "#string",
+        "legs": [],
+        "leg_settings": {}
+      },
+      "timestamp": {
+        "invited": "#string",
+        "joined": "#string"
+      },
+      "initiator": {
+        "invited": {
+          "isSystem": "#boolean"
+        },
+        "joined": {
+          "isSystem": "#boolean"
+        }
+      }
+    },
+    "timestamp": "#string",
+    "href": "#string"
+  }
+]

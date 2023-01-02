@@ -1,0 +1,4 @@
+{
+  "description": "Member does not exist, or you do not have access.",
+  "code": "conversation:error:member-not-found"
+}

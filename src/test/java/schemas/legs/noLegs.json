@@ -1,0 +1,13 @@
+{
+  "count": "#number",
+  "page_size": "#number",
+  "record_index": "#number",
+  "_embedded": {
+    "legs": []
+  },
+  "_links": {
+    "self": {
+      "href": "#string"
+    }
+  }
+}

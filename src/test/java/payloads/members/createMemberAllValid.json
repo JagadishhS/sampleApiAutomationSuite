@@ -1,0 +1,7 @@
+{
+  "action": "invite",
+  "user_id": "USR-b60a322b-1e51-4007-b746-40583087e8e2",
+  "channel": {
+    "type": "app"
+  }
+}

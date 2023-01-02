@@ -1,10 +1,17 @@
 Feature: test cases for update conversations API
 
+  Background:
+    # deleting all existing conversations
+    * def res = call read(reusableFeatures + 'common.feature@getConversations')
+    * def res = karate.jsonPath(res.response, "$._embedded.conversations.*.uuid")
+    * def fun = function(arg){ for (let i = 0; i < arg.length; i++) { karate.call(reusableFeatures + 'common.feature@deleteConversation', {id: arg[i]})}}
+    * call fun res
+
   Scenario: verify invalid and valid jwt response for update conversations api
     # creating a conversation
     * def conOne = call read(reusableFeatures + 'common.feature@createConversation')
     # 'hitting update conversations api with invalid token'
-    * call read(reusableFeatures + 'common.feature@updateConversation') {newAuth : 'asdf' , id : #(conOne.response.id), status : 401}
+    * call read(reusableFeatures + 'common.feature@updateConversation') {newAuth : 'dummyAuth' , id : #(conOne.response.id), status : 401}
       # 'verifying error response'
     * match response ==  read(responses + 'invalidJWT.json')
     # 'hitting update conversations api with valid token and verifying status code'
@@ -136,3 +143,17 @@ Feature: test cases for update conversations API
     * call read(reusableFeatures + 'common.feature@deleteConversation') {id : #(conOne.response.id), status : 200}
     * call read(reusableFeatures + 'common.feature@deleteConversation') {id : #(conTwo.response.id), status : 200}
 
+  Scenario: verify the response schema after update
+    # creating a conversation
+    * def conOne = call read(reusableFeatures + 'common.feature@createConversation')
+
+    # verifying the created conversation is present
+    * call read(baseCalls + '@get') {path: #(conversations) }
+    * match response.count == 1
+
+    * call read(reusableFeatures + 'common.feature@updateConversation') {id : #(conOne.response.id)}
+    # validating response Schema
+    * match response == read(conversationSchemas + 'createConversations.json')
+
+    # deleting created conversation
+    * call read(reusableFeatures + 'common.feature@deleteConversation') {id : #(conOne.response.id)}
