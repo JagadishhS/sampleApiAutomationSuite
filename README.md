@@ -1,6 +1,10 @@
 # Sample API Automation Suite done using Karate
 
-The sample cases in this suite are done for vonage's conversation APIs avaialble @ https://developer.nexmo.com/api/conversation
+This project contains both Manual and Automation test cases for API testing,
+
+Manual cases is placed at the project root : ./VonageConversationsApi Cases.xlsx
+
+The Automation cases are done using karate. These cases are done for vonage's conversation APIs avaialble @ https://developer.nexmo.com/api/conversation
 
 A copy the these Vonage api definitions can also be found at this project's root folder : ./conversation.yml
 
