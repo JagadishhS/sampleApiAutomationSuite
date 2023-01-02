@@ -1,0 +1,13 @@
+{
+  "count": "#number",
+  "page_size": "#number",
+  "record_index": "#number",
+  "_embedded": {
+    "conversations": "#[]"
+  },
+  "_links": {
+    "self": {
+      "href": "https://api-us-3.vonage.com/v0.1/conversations"
+    }
+  }
+}

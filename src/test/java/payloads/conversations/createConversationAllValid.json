@@ -1,0 +1,8 @@
+{
+  "name": "conversation 1",
+  "display_name": "conversation 1",
+  "image_url": "https://example.com/image.png",
+  "properties": {
+    "ttl": 10
+  }
+}

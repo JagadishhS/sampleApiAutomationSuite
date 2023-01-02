@@ -1,0 +1,9 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "order": [
+      "\"order\" must be one of [asc, desc, ASC, DESC]"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}

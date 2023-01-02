@@ -1,0 +1,9 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "page_size": [
+      "\"page_size\" must be larger than or equal to 1"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}

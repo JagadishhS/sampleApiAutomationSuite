@@ -1,0 +1,32 @@
+{
+  "count": "#number",
+  "page_size": "#number",
+  "record_index": "#number",
+  "_embedded": {
+    "conversations": [
+      {
+        "uuid": "#string",
+        "name": "#string",
+        "_links": {
+          "self": {
+            "href": "#string"
+          }
+        }
+      },
+      {
+        "uuid": "#string",
+        "name": "#string",
+        "_links": {
+          "self": {
+            "href": "#string"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "#string"
+    }
+  }
+}

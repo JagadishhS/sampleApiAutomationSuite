@@ -1,0 +1,4 @@
+{
+  "description": "The request failed because the conversation name already exists. Please provide a unique conversation name and try again.",
+  "code": "conversation:error:duplicate-name"
+}

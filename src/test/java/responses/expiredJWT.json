@@ -1,0 +1,4 @@
+{
+  "code": "system:error:expired-token",
+  "description": "You provided an expired token. Please provide a valid token."
+}

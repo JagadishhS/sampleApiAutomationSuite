@@ -1,0 +1,4 @@
+{
+  "description": "Conversation does not exist, or you do not have access.",
+  "code": "conversation:error:not-found"
+}

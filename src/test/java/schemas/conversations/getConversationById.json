@@ -1,0 +1,22 @@
+{
+  "uuid": "#string",
+  "name": "#string",
+  "display_name": "#string",
+  "image_url": "#string",
+  "timestamp": {
+    "created": "#string"
+  },
+  "sequence_number": "#number",
+  "numbers": [],
+  "state": "#string",
+  "properties": {
+    "ttl": "#number",
+    "custom_data": {}
+  },
+  "members": [],
+  "_links": {
+    "self": {
+      "href": "#string"
+    }
+  }
+}

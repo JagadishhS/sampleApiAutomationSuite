@@ -1,0 +1,9 @@
+{
+  "description": "Input validation failure.",
+  "error": {
+    "record_index": [
+      "\"record_index\" must be larger than or equal to 0"
+    ]
+  },
+  "code": "http:error:validation-fail"
+}
